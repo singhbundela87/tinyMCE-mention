@@ -1,33 +1,5 @@
 /*global tinymce, module, require, define, global, self */
-
-;(function (f) {
-  'use strict';
-
-  // CommonJS
-  if (typeof exports === 'object' && typeof module !== 'undefined') {
-    module.exports = f(require('jquery'));
-
-  // RequireJS
-  } else if (typeof define === 'function'  && define.amd) {
-    define(['jquery'], f);
-
-  // <script>
-  } else {
-    var g;
-    if (typeof window !== 'undefined') {
-      g = window;
-    } else if (typeof global !== 'undefined') {
-      g = global;
-    } else if (typeof self !== 'undefined') {
-      g = self;
-    } else {
-      g = this;
-    }
-    
-    f(g.jQuery);
-  }
-
-})(function ($) {
+(function ($) {
     'use strict';
 
     var AutoComplete = function (ed, options) {
@@ -336,7 +308,7 @@
                 if (!$selection.length) {
                     return;
                 }
-                    
+
                 var replacement = $('<p>' + this.options.delimiter + text + '</p>')[0].firstChild,
                     focus = $(this.editor.selection.getNode()).offset().top === ($selection.offset().top + (($selection.outerHeight() - $selection.height()) / 2));
 
@@ -413,5 +385,5 @@
     });
 
     tinymce.PluginManager.add('mention', tinymce.plugins.Mention);
-  
-});
+
+})($);
