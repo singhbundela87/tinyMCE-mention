@@ -3,18 +3,12 @@
     "version": "4.0.2",
     "repository": {
         "type": "git",
-        "url": "https://github.com/StevenDevooght/tinyMCE-mention"
+        "url": "https://github.com/SAManage/tinyMCE-mention"
     },
     "description": "Mention/Autocomplete plugin for tinyMCE WYSIWYG editor",
     "author": "Steven Devooght",
-    "bugs": {
-        "url": "https://github.com/StevenDevooght/tinyMCE-mention/issues"
-    },
     "engines": {
         "node": ">=0.10.26"
-    },
-    "dependencies": {
-        "jquery": ">=1.8.3"
     },
     "devDependencies": {
         "gulp": "~3.9.1",
