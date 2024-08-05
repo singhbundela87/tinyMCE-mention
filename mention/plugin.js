@@ -1,6 +1,6 @@
 /*global tinymce, module, require, define, global, self */
 (function ($) {
-  'use strict';
+    'use strict';
 
   var AutoComplete = function (ed, options) {
       this.editor = ed;
